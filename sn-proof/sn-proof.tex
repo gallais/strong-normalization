@@ -1163,6 +1163,31 @@ then $\Gamma \vdash C[\,(\lambda x.M)~N\,] : B' \in \csn$
 Direct using the Lemma \ref{lem:appsnclosureaux}.
 \end{proof}
 
+{\color{red}{
+\begin{lemma}[$\red$ and $\redSN$ are confluent]\label{lem:appsnclosurered}
+If $M \red N_1$ and $M \redSN N_2$ then
+\begin{itemize}
+  \item Either $N_1 = N_2$
+  \item Or there exists $N$ such that $N_1 \redSN N$ and $N_2 \red N$
+\end{itemize}
+\end{lemma}}}
+\begin{proof}
+By induction on both reduction proofs.
+\end{proof}
+
+{\color{red}{
+\begin{lemma}[$\SN$ is closed under reduction]\label{lem:appsnclosurered}
+\mbox{}
+  \begin{enumerate}
+  \item If $\Gamma \vdash M : A \in \SN$ and $M \red N$ then $\Gamma \vdash N : A \in \SN$
+  \item If $\Gamma \vdash M : A \in \SNe$ and $M \red N$ then $\Gamma \vdash N : A \in \SNe$
+  \end{enumerate}
+\end{lemma}}}
+\begin{proof}
+By mutual structural induction on the given derivations using the fact that
+$\red$ and $\redSN$ are confluent.
+\end{proof}
+
 
 \begin{theorem}[Soundness of $\SN$]
 \mbox{}
