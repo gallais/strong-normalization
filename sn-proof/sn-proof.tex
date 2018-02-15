@@ -938,18 +938,18 @@ By induction on the first derivation. [to check]
 \end{proof}
 
 
-\begin{lemma}[Stable under Substitution]\label{lem:SNsubst}\quad
+\begin{lemma}[Stable under Substitution of Strong Neutrals]\label{lem:SNsubst}\quad
   \begin{enumerate}
-  \item If $\Gamma, x{:}A \vdash M : B \in \SN$ and $\Gamma \vdash N : A \in \SN$
+  \item If $\Gamma, x{:}A \vdash M : B \in \SN$ and $\Gamma \vdash N : A \in \SNe$
     then $\Gamma \vdash [N/x]M : B \in \SN$.
-  \item If $\Gamma, x{:}A \vdash R : B \in \SNe$ and $\Gamma \vdash N : A \in \SN$
+  \item If $\Gamma, x{:}A \vdash R : B \in \SNe$ and $\Gamma \vdash N : A \in \SNe$
     then $\Gamma \vdash [N/x]R : B \in \SN$.
-  \item If $\Gamma, x{:}A \vdash M \redSN M' : B$ and $\Gamma \vdash N : A \in \SN$ then
+  \item If $\Gamma, x{:}A \vdash M \redSN M' : B$ and $\Gamma \vdash N : A \in \SNe$ then
     $\Gamma \vdash [N/x]M \redSN [N/x]M' : B$.
   \end{enumerate}
 \end{lemma}
 \begin{proof}
-Simultaneous induction on first derivation -- to proven together with lemma \ref{lm:pSN0} below.
+Simultaneous induction on first derivation
 
 % We only show a few cases.
 
@@ -974,8 +974,8 @@ Simultaneous induction on first derivation -- to proven together with lemma \ref
 
 \end{proof}
 
-\begin{lemma}[$\SN$ is closed under application]\label{lm:pSN0}
-If $\Gamma \vdash M : A \arrow B \in \SN$ and $\Gamma \vdash N : A \in \SN$ then $\Gamma \vdash M~N : B \in \SN$.
+\begin{lemma}[$\SN$ is closed under application to a Strong Neutral]\label{lm:pSN0}
+If $\Gamma \vdash M : A \arrow B \in \SN$ and $\Gamma \vdash N : A \in \SNe$ then $\Gamma \vdash M~N : B \in \SN$.
 \end{lemma}
 \begin{proof}
 By induction on $\SN$.
